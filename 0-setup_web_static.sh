@@ -6,6 +6,6 @@ sudo mkdir -p /data/web_static/releases/test
 sudo mkdir -p /data/web_static/shared
 echo "first web page" | sudo tee /data/web_static/releases/test/index.html
 sudo ln -sf /data/web_static/releases/test /data/web_static/current
-sudo sed -i "35i\\tlocation /hbnb_static {\n\talias /data/web_static/current;\n}" /etc/nginx/sites-available/default
+sudo sed -i '35 i\ \tlocation /hbnb_static {\n\talias /data/web_static/current;\n}' /etc/nginx/sites-available/default
 sudo chown ubuntu:ubuntu -R /data/
 sudo service nginx restart
