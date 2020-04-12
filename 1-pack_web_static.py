@@ -10,8 +10,8 @@ from time import strftime
 def do_pack():
     """function"""
     local("mkdir -p versions")
-    t = strftime("%Y%m%d%H%M%S")
-    full = local("tar -cvzf versions/web_static_{}.tgz web_static".format(t))
-    if full.succeeded:
-        return ("versions/web_static_{}".format(t))
+    full = local("tar -cvzf versions/web_static_{}.tgz\
+        web_static".format(strftime("%Y%m%d%H%M%S")))
+    if full:
+        return ("versions/web_static_{}".format(strftime("%Y%m%d%H%M%S")))
     return (None)
