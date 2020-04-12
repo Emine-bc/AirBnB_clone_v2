@@ -3,14 +3,14 @@
    of Airbnb_clone_v2
 '''
 from datetime import datetime
-from fabric.api import local
+from fabric.api import *
 
 
 def do_pack():
     """function"""
     local("mkdir -p versions")
-    full = "versions/web_static_{}.tgz".format(
-        datetime.now.strftime("%Y%m%d%H%M%S"))
-    if full is None:
-        return(None)
-    return(local("tar -cvzf {} web_static".format(full)))
+    full = local("tar -cvzf versions/web_static_{}.tgz\
+        web_static".format(strftime("%Y%m%d%H%M%S")))
+    if full:
+        return ("versions/web_static_{}".format(strftime("%Y%m%d%H%M%S")))
+    return (None)
