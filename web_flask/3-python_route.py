@@ -22,8 +22,14 @@ def c_var_text(text):
     return ("C " + str(text.replace("_", " ")))
 
 
+@app.route('/python/', strict_slashes=False)
+def display():
+    return('Python is cool')
+
+
 @app.route('/python/<text>', strict_slashes=False)
-def python_text(text):
-    return 'Python %s' % text.replace("_", " ")
+def p_var_text(text):
+    '''“HBNB!” '''
+    return ("Python " + str(text.replace("_", " ")))
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
