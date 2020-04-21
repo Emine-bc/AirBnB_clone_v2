@@ -19,7 +19,7 @@ def hello_hbnb():
 @app.route('/c/<text>', strict_slashes=False)
 def c_var_text(text_type):
     '''“HBNB!” '''
-    display = "c" + " " + text_type.replace('_', ' ')
+    display = "C" + " " + text_type.replace('_', ' ')
     return(display)
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
