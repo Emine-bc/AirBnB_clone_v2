@@ -17,7 +17,7 @@ def hello_hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def c_var_text(text):
+def python_var_text(text):
     '''“HBNB!” '''
     return ("C " + str(text.replace("_", " ")))
 
