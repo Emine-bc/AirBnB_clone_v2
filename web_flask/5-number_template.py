@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 '''script that create new route'''
+from flask import render_template
 from flask import Flask
 app = Flask(__name__)
 
@@ -40,7 +41,7 @@ def d_int(n):
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
-def template(n):
+def temp(n):
     '''“HBNB!” '''
     return (render_template("5-number.html", nbre=n))
 if __name__ == "__main__":
