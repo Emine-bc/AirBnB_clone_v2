@@ -17,7 +17,7 @@ def hello_hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def python_var_text(text):
+def c_var_text(text):
     '''“HBNB!” '''
     return ("C " + str(text.replace("_", " ")))
 
@@ -25,6 +25,6 @@ def python_var_text(text):
 @app.route('/python/<text>', strict_slashes=False)
 def p_var_text(text):
     '''“HBNB!” '''
-    return ("Python " + str(text.replace("_", " ")))
+    return ("Python " + text.replace("_", " "))
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
