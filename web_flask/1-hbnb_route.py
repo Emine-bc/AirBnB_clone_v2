@@ -13,6 +13,6 @@ def hello_world():
 @app.route('/hbnb', strict_slashes=False)
 def hello_hbnb():
     '''“HBNB!” '''
-    return ('HBNB!')
+    return ('HBNB')
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
