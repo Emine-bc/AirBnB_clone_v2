@@ -49,6 +49,6 @@ def temp(n):
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def odd_or_even(n):
     '''“HBNB!” '''
-    return (render_template("6-number_odd_or_even.py", nbre=n))
+    return (render_template("6-number_odd_or_even.py", num=n))
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
