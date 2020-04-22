@@ -24,4 +24,4 @@ class State(BaseModel, Base):
             allcities = storage.all(City)
             city_list = [v for v in models.storage.all(City).values()
                          if v.state_id == self.id]
-        return city_list
+            return city_list
