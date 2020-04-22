@@ -9,8 +9,11 @@ app = Flask(__name__)
 @app.route('/states_list', strict_slashes=False)
 def state_l():
     '''HBNB!'''
-    return (render_template(
-        '7-states_list.html', states=storage.all('State').values()))
+    out = []
+    for key in storage.all(State):
+        states.append(storage.all(key))
+        y = render_template('7-states_list.html', out=out)
+    return (y)
 
 
 @app.teardown_appcontext
